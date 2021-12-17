@@ -18,7 +18,7 @@
 
 #### 安装教程
 
-1. 下载程序压缩包 [SimpleDigitalEarth.7z](http://www.11d-beyonder.top/download/SimpleDigitalEarth.7z)。
+1. 下载程序压缩包 [SimpleDigitalEarth.7z](http://www.11d-beyonder.top/download/SimpleDigitalEarth.7z)，若提示不安全是因为网站还没开通SSL证书，强制保留即可，或复制链接去下载器下载。
 
 2. 解压后有三个文件夹：DigitalEarth、OSG、osgEarth。
 

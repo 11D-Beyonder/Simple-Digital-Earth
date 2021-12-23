@@ -18,7 +18,7 @@
 
 #### 安装教程
 
-1. 下载程序压缩包 [SimpleDigitalEarth.7z](http://www.11d-beyonder.top/download/SimpleDigitalEarth.7z)，若提示不安全是因为网站还没开通SSL证书，强制保留即可，或复制链接去下载器下载。
+1. 下载程序压缩包 （服务器流量吃紧，有事联系ztz20001117@126.com），若提示不安全是因为网站还没开通SSL证书，强制保留即可，或复制链接去下载器下载。
 
 2. 解压后有三个文件夹：DigitalEarth、OSG、osgEarth，**解压路径不要有中文！！！！！** MFC应用对中文路径可能不是太友好。
 

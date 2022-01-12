@@ -1,0 +1,83 @@
+﻿<map name="globe" type="geocentric" version="2">
+  <!-- 定义全球影像-->
+  <image name="globeImage" driver="gdal">
+    <url>../data/globe/globe.tif</url>
+  </image>
+  <!-- 全球高程-->
+  <heightfield name="globeHeightfiled" driver="gdal">
+    <url>../data/heightfield/30m.tif</url>
+  </heightfield>
+  <image name="detail" driver="composite">
+    <!-- 局部高清纹理-->
+    <image name="zhejiangImage" driver="gdal">
+      <url>../data/detail/zhejiang.tif</url>
+    </image>
+    <!-- <image name="huzhouImage" driver="gdal">
+      <url>../data/detail/huzhou.tif</url>
+    </image> -->
+    <image name="deqingImage" driver="gdal">
+      <url>../data/detail/deqing.tif</url>
+    </image>
+    <image name="plateauImage" driver="gdal">
+      <url>../data/detail/plateau.tif</url>
+    </image>
+  </image>
+  <!-- 国界线（黄色）与省界线（白色）-->
+  <image name="countryBoundary" driver="agglite">
+    <features name="world" driver="ogr">
+      <url>../data/shpFile/world.shp</url>
+      <build_spatial_index>true</build_spatial_index>
+    </features>
+    <geomerty_type>line</geomerty_type>
+    <relative_line_size>true</relative_line_size>
+    <styles>
+      <style type="text/css">
+        world {
+          stroke: #ffff00;
+          stroke-opacity: 1.0;
+          stroke-width: 2.0;
+        }
+      </style>
+    </styles>
+  </image>
+  <image name="provinceBoundary" driver="agglite">
+    <features name="china" driver="ogr">
+      <url>../data/shpFile/china.shp</url>
+      <build_spatial_index>true</build_spatial_index>
+    </features>
+    <geomerty_type>line</geomerty_type>
+    <relative_line_size>true</relative_line_size>
+    <styles>
+      <style type="text/css">
+        china {
+          stroke: #ffffff;
+          stroke-opacity: 1.0;
+          stroke-width: 1.5;
+        }
+      </style>
+    </styles>
+  </image>
+  <image name="contour" driver="agglite">
+    <features name="contour" driver="ogr">
+      <url>../data/shpFile/plateau.shp</url>
+      <build_spatial_index>true</build_spatial_index>
+    </features>
+    <geomerty_type>line</geomerty_type>
+    <relative_line_size>true</relative_line_size>
+    <styles>
+      <style type="text/css">
+        china {
+          stroke: #000000;
+          stroke-opacity: 1.0;
+          stroke-width: 2;
+        }
+      </style>
+    </styles>
+  </image>
+  <!-- 文件缓存-->
+  <options>
+    <cache type="filesystem">
+      <path>./FileCache</path>
+    </cache>
+  </options>
+</map>
